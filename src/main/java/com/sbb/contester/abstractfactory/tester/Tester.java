@@ -2,8 +2,8 @@ package com.sbb.contester.abstractfactory.tester;
 
 import java.io.IOException;
 
-public interface Tester {
+public abstract class Tester {
 
-	public void testIt();
-	public void checkService(String wsURL, String xmlInput) throws IOException;
+	public abstract void testIt();
+	public abstract void checkService(String wsURL, String xmlInput) throws IOException;
 }
