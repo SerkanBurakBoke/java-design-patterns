@@ -1,4 +1,4 @@
-package com.sbb.contester.abstractfactory.tester;
+package com.sbb.contester.singleton;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -19,7 +19,7 @@ import org.apache.log4j.Logger;
 
 import com.sbb.contester.util.TesterConstants;
 
-public class ConnectionTester extends Tester {
+public class ConnectionTester {
 	Logger logger = Logger.getLogger(this.getClass());
 	private static Properties props = null;
 	private static ConnectionTester INSTANCE = null;
@@ -36,7 +36,6 @@ public class ConnectionTester extends Tester {
 		return props;
 	}
 
-	@Override
 	public void testIt() {
 		try {
 			for (String url : getUrls()) {
@@ -52,8 +51,7 @@ public class ConnectionTester extends Tester {
 	public static void main(String[] args) {
 		new ConnectionTester().testIt();
 	}
-	
-	@Override
+
 	public void checkService(String wsURL, String xmlInput) throws IOException {
 		HttpURLConnection httpConn = (HttpURLConnection) generateConnection(wsURL);
 

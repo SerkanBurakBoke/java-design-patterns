@@ -1,4 +1,4 @@
-package com.sbb.contester.factory.tester;
+package com.sbb.contester.factory;
 
 public class TesterFactory {
 	public Tester getConnectionTester() {

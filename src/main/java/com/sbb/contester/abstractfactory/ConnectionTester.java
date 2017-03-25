@@ -1,4 +1,4 @@
-package com.sbb.contester.factory.tester;
+package com.sbb.contester.abstractfactory;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -19,7 +19,7 @@ import org.apache.log4j.Logger;
 
 import com.sbb.contester.util.TesterConstants;
 
-public class ConnectionTester implements Tester {
+public class ConnectionTester extends Tester {
 	Logger logger = Logger.getLogger(this.getClass());
 	private static Properties props = null;
 	private static ConnectionTester INSTANCE = null;

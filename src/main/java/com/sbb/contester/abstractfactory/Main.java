@@ -1,4 +1,4 @@
-package com.sbb.contester.factory.tester;
+package com.sbb.contester.abstractfactory;
 
 public class Main {
 	public static void main(String[] args) {
